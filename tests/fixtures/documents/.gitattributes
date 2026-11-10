@@ -1,0 +1,3 @@
+# PDF cross-reference offsets require the original bytes on every platform.
+*.pdf binary
+*.docx binary

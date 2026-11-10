@@ -1,0 +1,10 @@
+{
+  "name": "CC-CEDICT",
+  "source": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution": "CC-CEDICT contributors; distributed by MDBG",
+  "downloadedAt": "2026-11-05T15:47:19.522Z",
+  "entries": 125367,
+  "sha256": "6ff538467c563618c0586658c8ef9d68230c63c6e96482a2fd22239ffe4dc71d"
+}

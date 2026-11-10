@@ -1,0 +1,125 @@
+{
+  "capturedAt": "2026-11-10T15:16:39.155Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "scope": "Actual production web UI; original demonstration content; no live AI requests or simulated replies; not an installer test.",
+  "files": [
+    {
+      "path": "zh-CN/import.png",
+      "sha256": "e484ece0e39f905d6b30b8657d419bf40ce131e56576873c0ad7690ff02a9d9b",
+      "bytes": 107553,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/reader.png",
+      "sha256": "abfcbf5df3066d91ae27518d03b0f91e96d09b3705100d3855be352ce5e09466",
+      "bytes": 172166,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/review.png",
+      "sha256": "36e5e43e215791803887737e6d67a9641095f6388a2af9e71314d23f484c7048",
+      "bytes": 118774,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/notes.png",
+      "sha256": "750ac02b5dbc9ee7837d62a291a4cd32732f645fcdca649a55af1f6e827b774f",
+      "bytes": 160779,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/writing.png",
+      "sha256": "633ae77cc6679d87733dd2405e27fdd8fbd4134a97e70b3dd6829940eb422682",
+      "bytes": 193117,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/home.png",
+      "sha256": "625e8858c60c4c441a93f36ffc442e102cf4bcd035a84541de42da64d580152a",
+      "bytes": 145275,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/card.png",
+      "sha256": "bfbbf00b2d0e2c4c384d213971d0ee0b122869f5faef24ca784d86a95d63302b",
+      "bytes": 179468,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "zh-CN/settings.png",
+      "sha256": "d3f843e6f59559f5b0f81c332bdb5a933bc018ffd2c5c7d0694343fc5165b653",
+      "bytes": 94216,
+      "width": 1058,
+      "height": 911
+    },
+    {
+      "path": "en/import.png",
+      "sha256": "7dd642485805f8de402dba3bd17664ecf6bac9d27a677ab99e1354c596bf8d67",
+      "bytes": 106109,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/reader.png",
+      "sha256": "3c307b2d7754fbad2c3c63f5e4740539b2a20837335f700c675b4e07d5fe8065",
+      "bytes": 154385,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/review.png",
+      "sha256": "1da8fb775eaaff4a88cb305d234007366ba5949b7dccc2fdd1ed0580accdcc42",
+      "bytes": 105839,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/notes.png",
+      "sha256": "7ef5a5276a98c98181a8b697c1b014ffae3f01bc1914386432f2fbecc977acc4",
+      "bytes": 147137,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/writing.png",
+      "sha256": "c1866665baa880f7c1480ae7944363db1f0fc612e389922737d0570873a75a64",
+      "bytes": 179528,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/home.png",
+      "sha256": "f9385e91bcdbe70755a9b796979249054b590212d69623525a488db0fca3c33b",
+      "bytes": 143655,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/card.png",
+      "sha256": "a2d15798d46e1dc3faf361ff633d21864cc3aadc042bc880d857d4f37b922a95",
+      "bytes": 175527,
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "en/settings.png",
+      "sha256": "0199b0a1783d13cff0745c924647134167aea4eb6596ca5abf2925ced34543d1",
+      "bytes": 84197,
+      "width": 1058,
+      "height": 911
+    }
+  ],
+  "applicationVersion": "0.1.0",
+  "buildSourceSha256": "05c0418291726010eb1121ea49ee3fc2501cfc6f5f15b70b3890e81558bc48c7",
+  "builtAt": "2026-11-10T15:00:20.164Z"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "family": "NotoSansSC",
+    "source": "https://github.com/google/fonts/blob/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+    "sourceGitBlob": "fb0637bafbcd804fe32152370a1225990745b4bc",
+    "license": "SIL Open Font License 1.1",
+    "file": "NotoSansSC-VF.woff2",
+    "sha256": "794be7fce32dd50e67676c601cfa0c142997d6be1de1d11f265bea597cd63efc",
+    "bytes": 9214564,
+    "sourceBlobUrl": "https://api.github.com/repos/google/fonts/git/blobs/fb0637bafbcd804fe32152370a1225990745b4bc"
+  },
+  {
+    "family": "NotoSerifSC",
+    "source": "https://github.com/google/fonts/blob/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+    "sourceGitBlob": "eab063faf229160a52d3760f5555150e4eb9e5bf",
+    "license": "SIL Open Font License 1.1",
+    "file": "NotoSerifSC-VF.woff2",
+    "sha256": "5a5442a4454d36d2de8d5e196327a0b217d530d08d4af564aceaac556be86e64",
+    "bytes": 12747776,
+    "sourceBlobUrl": "https://api.github.com/repos/google/fonts/git/blobs/eab063faf229160a52d3760f5555150e4eb9e5bf"
+  }
+]

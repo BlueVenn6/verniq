@@ -1,0 +1,53 @@
+{
+  "name": "my-life-map-web",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Nera Venn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlueVenn6/verniq.git"
+  },
+  "scripts": {
+    "predev": "node scripts/prepare-pdf-assets.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/prepare-pdf-assets.mjs && node scripts/build-identity.mjs capture",
+    "build": "next build",
+    "start": "node scripts/serve-out.mjs",
+    "lint": "eslint",
+    "test": "vitest run",
+    "serve:out": "node scripts/serve-out.mjs",
+    "desktop:serve": "npm run build && npm run serve:out",
+    "tauri": "tauri",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "node scripts/desktop-build.mjs",
+    "postbuild": "node scripts/build-identity.mjs stamp",
+    "test:production": "node tests/e2e/run.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/plugin-dialog": "^2.7.0",
+    "@tauri-apps/plugin-fs": "^2.5.0",
+    "mammoth": "^1.12.0",
+    "next": "16.4.5",
+    "pdfjs-dist": "^5.4.296",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "ts-fsrs": "^5.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "playwright-core": "1.65.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "4.1.12"
+  }
+}

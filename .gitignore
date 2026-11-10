@@ -1,0 +1,81 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+/public/pdfjs/
+
+# tauri
+/src-tauri/target/
+
+# production
+/build
+
+# misc
+.DS_Store
+Thumbs.db
+*.pem
+_reference-repos/
+
+# Local agent instructions and private maintenance records are not public sources.
+/AGENTS.md
+/CLAUDE.md
+/.local-maintenance/
+/src-tauri/gen/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next-*.log
+*.log
+*.log.*
+
+# local env files; keep .env.example commit-friendly
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# local user data
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.local.db
+*.local.db-*
+*.workspace.db
+*.workspace.db-*
+*.user.db
+*.user.db-*
+*.workspace.json
+*.workspace.backup-*.json
+*.backup-*.json
+verniq-backup-*.json
+*.verniq-lock
+.verniq-save-*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

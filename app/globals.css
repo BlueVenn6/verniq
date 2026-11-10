@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@source "../app";
+@source "../src";
+
+@font-face {
+  font-family: "Verniq Card Serif";
+  src: url("/fonts/cards/NotoSerifSC-VF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Verniq Card Sans";
+  src: url("/fonts/cards/NotoSansSC-VF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --background: #f2e9da;
+  --foreground: #1f1e1c;
+  --brand-ink: #1f1e1c;
+  --brand-charcoal: #3a3835;
+  --brand-sand: #d9cbb6;
+  --brand-paper: #f2e9da;
+  --brand-sage: #a7b49a;
+  --brand-blue: #6d89a6;
+  --brand-gold: #d4a261;
+  --brand-surface: rgba(255, 250, 240, 0.9);
+  --brand-card: #fffaf0;
+  --brand-card-soft: #f8f0e2;
+  --brand-border: rgba(185, 165, 137, 0.46);
+  --brand-border-strong: rgba(118, 101, 80, 0.34);
+  --brand-active: #2f2a24;
+  --brand-active-hover: #27231f;
+  --brand-muted: #6e675e;
+  --radius-control: 0.875rem;
+  --radius-card: 1rem;
+  --shadow-soft: 0 8px 20px rgba(69, 52, 32, 0.09);
+  --font-display: "Noto Serif SC", "Source Han Serif SC", STSong, SimSun, Georgia, serif;
+  --font-ui: "Noto Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Segoe UI", system-ui, sans-serif;
+  --font-reading: "Noto Serif SC", "Source Han Serif SC", Georgia, "Times New Roman", STSong, SimSun, serif;
+  --font-heading: var(--font-display);
+  --font-code: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-display);
+  --font-mono: var(--font-code);
+}
+
+body {
+  background: var(--brand-paper);
+  color: var(--foreground);
+  font-family: var(--font-ui);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Let long source URLs and AI tokens wrap without widening either work pane. */
+.reader-chat-log,
+.reader-original p.whitespace-pre-wrap {
+  overflow-wrap: anywhere;
+}
+
+/* Keep the editor beside its controls at desktop and zoomed desktop widths. */
+@media (min-width: 900px) {
+  .reader-workbench { height: calc(100dvh - 7rem); min-height: 32rem; grid-template-rows: auto minmax(0, 1fr); }
+  .reader-workbench > .reader-original { overflow-y: auto; overscroll-behavior: contain; }
+  .reader-workbench > .reader-assistant:not([hidden]) { display: flex; flex-direction: column; align-self: start; max-height: 100%; min-height: 0; overflow-y: auto; }
+  .reader-chat-panel:not([hidden]) { flex: 1; min-height: 0; overflow-y: auto; }
+  .reader-chat-log { max-height: 42dvh; }
+  .reader-notes-panel:not([hidden]), .reader-assistant > div[tabindex]:not([hidden]) { overflow-y: auto; }
+  .publish-workbench { align-items: start; }
+  .publish-controls { position: sticky; top: 5.5rem; max-height: calc(100dvh - 7rem); overflow-y: auto; overscroll-behavior: contain; padding: 2px 8px 12px 2px; }
+  .publish-output { display: flex; flex-direction: column; min-height: 0; gap: 0.75rem; }
+  .publish-preview { min-height: 0; }
+  .publish-output > .publish-actions { position: sticky; top: 5.5rem; z-index: 10; }
+
+}
+
+/* Keep the question and Send visible; only the conversation history scrolls. */
+@media (min-width: 900px) and (min-height: 760px) {
+  .reader-assistant:has(.reader-chat-has-messages):not([hidden]) { align-self: stretch; height: 100%; }
+  .reader-chat-panel:has(.reader-chat-has-messages):not([hidden]) { display: flex; flex-direction: column; overflow: hidden; }
+  .reader-chat-has-messages { flex: 1; overflow: hidden; }
+  .reader-chat-has-messages > section:first-child { display: flex; flex-direction: column; flex: 1; min-height: 5rem; }
+  .reader-chat-has-messages > section:first-child .reader-chat-log { flex: 1; min-height: 0; max-height: none; }
+  .reader-chat-has-messages > section:first-child > details[open] { flex: 1 1 0; min-height: 0; overflow-y: auto; }
+  .reader-chat-has-messages > :not(:first-child) { flex-shrink: 0; }
+}
+
+::selection {
+  background: rgba(212, 162, 97, 0.34);
+  color: var(--brand-ink);
+}
+
+.bg-white {
+  background-color: var(--brand-surface) !important;
+}
+
+.bg-stone-50,
+.bg-\[\#fbfaf7\] {
+  background-color: var(--brand-card-soft) !important;
+}
+
+.bg-\[\#f8f3ed\] {
+  background-color: rgba(242, 233, 218, 0.9) !important;
+}
+
+.bg-stone-900,
+.bg-stone-950 {
+  background-color: var(--brand-active) !important;
+}
+
+.text-stone-950,
+.text-stone-900 {
+  color: var(--brand-ink) !important;
+}
+
+.text-stone-700 {
+  color: var(--brand-charcoal) !important;
+}
+
+.text-stone-600,
+.text-stone-500 {
+  color: var(--brand-muted) !important;
+}
+
+.text-stone-400 {
+  color: rgba(110, 103, 94, 0.72) !important;
+}
+
+.border-stone-200,
+.border-stone-200\/70,
+.border-stone-300 {
+  border-color: var(--brand-border) !important;
+}
+
+.hover\:bg-stone-100:hover {
+  background-color: rgba(217, 203, 182, 0.33) !important;
+}
+
+.hover\:border-stone-300:hover {
+  border-color: var(--brand-border-strong) !important;
+}
+
+.shadow-stone-200\/60,
+.shadow-stone-200\/40 {
+  --tw-shadow-color: rgba(96, 80, 59, 0.12) !important;
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(255, 250, 240, 0.9);
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(109, 137, 166, 0.58);
+  outline-offset: 2px;
+}
+
+.brand-hero {
+  background: transparent;
+}
+
+.brand-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+nav,
+summary,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-ui);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.brand-hero h1,
+main section > h1,
+main section > div.max-w-3xl > h1,
+main section > div.max-w-3xl > h2.text-3xl,
+main section > div.max-w-3xl > h2.text-2xl,
+main section > div.max-w-4xl > h1,
+main section > div.max-w-4xl > h2.text-3xl,
+main section > div.max-w-4xl > h2.text-2xl {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+main main h1,
+main main h2,
+main aside h2 {
+  font-family: var(--font-reading);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+main main p.whitespace-pre-wrap,
+main article p.whitespace-pre-wrap,
+[class*="whitespace-pre-wrap"][class*="leading-8"] {
+  font-family: var(--font-reading);
+  font-weight: 400;
+}
+
+.brand-entry-card h2,
+.brand-entry-card h3,
+.brand-entry-card span,
+.brand-status-pill,
+.brand-control-pill {
+  font-family: var(--font-ui);
+}
+
+.brand-status-pill,
+.brand-control-pill {
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius-control);
+  background: var(--brand-surface);
+}
+
+.brand-entry-card {
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius-card);
+  background: var(--brand-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.brand-entry-card:hover {
+  border-color: var(--brand-border-strong);
+  background: var(--brand-surface);
+}
+
+.publish-editor-expanded { position: fixed; inset: 5.25rem max(1rem, calc((100vw - 72rem)/2)) 1rem; z-index: 30; overflow-y: auto; box-shadow: 0 0 0 100vmax rgb(45 40 33 / 25%); }
+.publish-editor-expanded > div:first-child { position: sticky; top: -1rem; z-index: 1; background: #fffaf0; padding-bottom: 0.75rem; }

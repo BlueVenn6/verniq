@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Verniq",
+  "version": "0.1.0",
+  "identifier": "io.github.bluevenn6.verniq",
+  "build": {
+    "beforeDevCommand": "npm run desktop:serve",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../out"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Verniq",
+        "width": 1280,
+        "height": 820,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' ipc: http://ipc.localhost; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset:; media-src 'self' https://api.dictionaryapi.dev https://upload.wikimedia.org; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost https: http://localhost:* http://127.0.0.1:*; worker-src 'self' blob:; child-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "resources": {
+      "../LICENSE": "licenses/VERNIQ-APACHE-2.0.txt",
+      "../THIRD_PARTY_NOTICES.md": "licenses/THIRD_PARTY_NOTICES.md",
+      "../licenses/CC-BY-SA-4.0.txt": "licenses/CC-BY-SA-4.0.txt",
+      "../public/dictionaries/README.md": "licenses/CC-CEDICT-ATTRIBUTION.md",
+      "../public/dictionaries/ecdict/LICENSE.txt": "licenses/ECDICT-MIT.txt",
+      "../public/fonts/cards/NotoSerifSC-OFL.txt": "licenses/NotoSerifSC-OFL.txt",
+      "../public/fonts/cards/NotoSansSC-OFL.txt": "licenses/NotoSansSC-OFL.txt"
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
