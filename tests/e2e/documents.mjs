@@ -22,6 +22,9 @@ try{
   checks.push({file,errorExplained:true,inputPreserved:true});
  }
  await p.goto(base+'/reader/');await p.getByLabel('当前材料',{exact:true}).selectOption({label:'chinese-pdf'});await p.getByRole('button',{name:'切换为学习中文',exact:true}).click();await p.getByRole('tab',{name:'AI discussion',exact:true}).waitFor();
+ // The translated tabs render before the Reader's separate workspace subscriber finishes syncing.
+ await p.getByRole('button',{name:'Switch to learning Chinese',exact:true}).waitFor({state:'hidden'});
+ await p.waitForFunction(()=>JSON.parse(localStorage.getItem('my-life-map:workspace:core:v1')).languageSettings.targetLanguage==='zh');
  assert.equal(await p.getByRole('button',{name:'Switch to learning Chinese',exact:true}).count(),0);
  checks.push({modeSwitch:'Chinese material switches to learning Chinese with English UI'});
  await p.goto(base+'/inbox/');await p.getByRole('tab',{name:'Choose a document',exact:true}).click();await p.locator('input[type=file]').first().setInputFiles('tests/fixtures/documents/scanned-pdf.pdf');await p.getByRole('button',{name:'Import and read',exact:true}).click();const alert=p.getByRole('region',{name:'Import form',exact:true}).getByRole('alert');await p.waitForFunction(()=>document.querySelector('[role=alert]')?.textContent.includes('scanned PDFs'));assert.ok((await alert.innerText()).includes('scanned PDFs'));assert.ok(!/[\u3400-\u9fff]/.test(await alert.innerText()));
